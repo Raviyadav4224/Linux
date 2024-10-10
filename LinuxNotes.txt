@@ -1,0 +1,29 @@
+1. Linux - 
+    It is an open-source operating system based on Unix principle
+    The kernel acts as a bridge between software and hardware.
+    It manages hardware resources (like CPU, memory, and devices) and allows software applications to interact with the hardware. 
+    shell is an intermediate btw kernel and hardware
+
+    User → Shell → Kernel → Hardware
+
+
+    ------------   Basic commands   ------------       ------------    
+
+1. uname ->  prints the kernel name
+2. man <Command> -> manual command . gives info about the command passed
+3. hostname -> gives hostname
+4. whoami-> Who am i - gives information about the current User
+5. sudo -> runs command using root User, Root user is the admin user
+6. sudo - i -> login the current user as root user
+7. tty ->
+8. users -> gives info about all the users on this system
+9. adduser username -> creates new user 
+10. id -> gives information about the user logged in
+11. users -> gives information about all the groups, groups refers to say admin group , normal user group etc
+12. su -> switch user , switches users
+13. usermod -> user modify , modifies users 
+    usermod -g group_NewGroup username
+    usermod -a (append) -G sudo dummy1  (Gives sudo permission to dummy1 user)
+14. addgroup groupName-> creates new group
+15. deluser username-> delete the given username
+16. delgroup groupName-> deletes the given groupName
