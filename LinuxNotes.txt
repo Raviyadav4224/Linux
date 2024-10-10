@@ -10,20 +10,56 @@
     ------------   Basic commands   ------------       ------------    
 
 1. uname ->  prints the kernel name
+
 2. man <Command> -> manual command . gives info about the command passed
+
 3. hostname -> gives hostname
+
 4. whoami-> Who am i - gives information about the current User
+
 5. sudo -> runs command using root User, Root user is the admin user
+
 6. sudo - i -> login the current user as root user
+
 7. tty ->
+
 8. users -> gives info about all the users on this system
+
 9. adduser username -> creates new user 
+
 10. id -> gives information about the user logged in
+
 11. users -> gives information about all the groups, groups refers to say admin group , normal user group etc
+
 12. su -> switch user , switches users
+
 13. usermod -> user modify , modifies users 
     usermod -g group_NewGroup username
     usermod -a (append) -G sudo dummy1  (Gives sudo permission to dummy1 user)
+
 14. addgroup groupName-> creates new group
+
 15. deluser username-> delete the given username
+
 16. delgroup groupName-> deletes the given groupName
+
+17. date -> prints or sets the system date or time
+
+18. echo -> The echo command in Linux is used to display a line of text or a string. It's commonly used to print text to the terminal or to write data to a file
+            echo "file content" > filename -> adds content to given filename
+            echo "file content" >> filename -> appends content to the given filename
+
+19. passwd -> changes the current password of user
+
+20. pwd -> Shows the current working directory
+
+21. touch filename-> Used to create new file , touch .filename creates a hidden file
+
+22. cd -> change directory , cd .. moves to the parent directory, cd - move to the previous directory
+
+23. head filename -> Shows starting content of file for given number of lines
+    head  -10 dummy.txt prints first 10 lines
+
+24. tail filename -> Shows starting content of file for given number of lines
+    tail  -10 dummy.txt prints alst 10 lines
+    tail -f dummy.txt - shows live changes in a file
