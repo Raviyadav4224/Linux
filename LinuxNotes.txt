@@ -1,17 +1,18 @@
 1. Linux - 
     It is an open-source operating system based on Unix principle
     The kernel acts as a bridge between software and hardware.
-    It manages hardware resources (like CPU, memory, and devices) and allows software applications to interact with the hardware. 
+    It manages hardware resources (like CPU, memory, and devices) and allows software applications to 
+    interact with the hardware. 
     shell is an intermediate btw kernel and hardware
 
     User → Shell → Kernel → Hardware
 
 
-    ------------   Basic commands   ------------       ------------    
+    ------------   Basic commands   ------------    
 
 1. uname ->  prints the kernel name
 
-2. man <Command> -> manual command . gives info about the command passed
+2. man <Command> -> manual command gives info about the command passed
 
 3. hostname -> gives hostname
 
@@ -29,7 +30,8 @@
 
 10. id -> gives information about the user logged in
 
-11. users -> gives information about all the groups, groups refers to say admin group , normal user group etc
+11. users -> gives information about all the groups, groups refers to say admin group , normal user 
+    group etc
 
 12. su -> switch user , switches users
 
@@ -45,7 +47,8 @@
 
 17. date -> prints or sets the system date or time
 
-18. echo -> The echo command in Linux is used to display a line of text or a string. It's commonly used to print text to the terminal or to write data to a file
+18. echo -> The echo command in Linux is used to display a line of text or a string. It's commonly used 
+    to print text to the terminal or to write data to a file
             echo "file content" > filename -> adds content to given filename
             echo "file content" >> filename -> appends content to the given filename
 
@@ -63,3 +66,29 @@
 24. tail filename -> Shows starting content of file for given number of lines
     tail  -10 dummy.txt prints alst 10 lines
     tail -f dummy.txt - shows live changes in a file
+
+25. file -> determines file type
+
+26. sort filename -> sorts the file contents
+    to store the sorted content inside another file use sort -o result.txt file1.txt file2.txt
+
+27. cat filename-> concatinates the file and shows on standard output device or terminal
+    cat > result.txt -> whatever is written in stored inside result.ṭxt file
+    cat result.txt -> reads the content of result.txt file
+    > standard output 
+    < standard input
+    input(0) output(1) error(2)
+    
+    unknownCommand >> error.txt 2>&1   (append the standard output in error.txt and standard error 
+    is redirected to standard output)
+
+    >> appends into the file
+
+28. pipe concept ->output of one command becomes input for another command 
+    ls | sort  -> ls output acts as input for sort
+
+29. mkdir directoryName -> make directory
+    mkdir -p test1/test2/test3/{folder1,folder2}
+
+30. rmdir directoryName -> removes a directory
+    rm -rv directoryName -> removes directory and shows on terminal
