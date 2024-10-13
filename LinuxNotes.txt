@@ -92,3 +92,44 @@
 
 30. rmdir directoryName -> removes a directory
     rm -rv directoryName -> removes directory and shows on terminal
+
+31. ls -l -> lists file in long listing format
+
+    -rwx -rw r--
+    read write execute
+    user group others
+    * By default execution permission is not given to any file in linux due to security purpose
+
+    First Column (- rw- r-- r--): This represents the file permissions.
+    The first character (-) indicates the file type (- for a regular file, d for a directory, l for a symbolic link).
+    The next three characters (rw-) indicate the owner's permissions:
+    r: read
+    w: write
+    x: execute
+    The next three characters (r--) represent the group's permissions.
+    The last three characters (r--) represent others' permissions.
+
+32. cp source destination-> copy command 
+
+33. mv source destination -> renames or moves files from source to destination
+
+34. chmod -> change mode 
+    chmod [who][operator][permissions] filename
+    Who: Specifies whose permissions you want to change.
+
+    u = user (owner)
+    g = group
+    o = others
+    a = all (user, group, and others)
+    Operator: Specifies how to change the permissions.
+
+    + = add permission
+    - = remove permission
+    = = set exact permission
+    Permissions:
+
+    r = read
+    w = write
+    x = execute
+    Example:
+    chmod u+x myfile.txt
