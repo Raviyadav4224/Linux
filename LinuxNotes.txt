@@ -133,3 +133,56 @@
     x = execute
     Example:
     chmod u+x myfile.txt
+
+   *** Octal representation ***
+    4 - r - Read
+    2 - w - Write
+    1 - x - Execute
+    Example:
+    chmod 766 myfile.txt -> will give rwx rw- rw- permission
+
+35. setgid -> sets group id
+    
+   *** Octal representation ***
+    4 - setuid
+    2 - setgid
+    1 - sticky
+
+    Example:
+    chmod 2766 myfile.txt -> will setgid as current group & will give rwx rw- rw- permission
+
+36. which commandName -> searches for the full path of a specified command
+
+37. umask -> sets the default permissions for new files and directories
+    Example 
+    usmask 022 -> 777-022 = 755 means rwe r-x r-x for files and directories
+
+38. chown  owner:group filename -> used to changes owner and or group of file/directory
+    Example
+    chown ravi:raviGrp ravi.txt
+
+38. chgrp group filename -> used to changes owner and or group of file/directory 
+    Example
+    chgrp raviGrp ravi.txt
+
+39. mount filename path -> is used to mount the contents of device or iso etc files into a given path folder1
+
+40. mountpoint point/pathName -> tells whether the given point is mountpoint or not
+
+41. umount -> unmounts the given mountpoint
+
+42. du -> disk usage gives info about the space the folder/files takes
+
+43. df -> disk filesystem used to display information about disk space usage on mounted filesystems
+
+44. lsblk -> list block devices 
+
+45. fdisk -> 
+
+46. gzip filename -> compresses the given file 
+
+46. gunzip filename -> de-compresses the given file 
+
+47. zip createdFileName folderName -> compresses the given folder 
+
+48. unzip folderName -> compresses the given folder 
