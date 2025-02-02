@@ -15,6 +15,7 @@
 2. man <Command> -> manual command gives info about the command passed
 
 3. hostname -> gives hostname
+    hostname -I gives the IP Address
 
 4. whoami-> Who am i - gives information about the current User
 
