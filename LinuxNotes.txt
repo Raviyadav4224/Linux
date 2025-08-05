@@ -2,10 +2,14 @@
 
     It is an open-source operating system based on Unix principle
 
-    * The kernel acts as a bridge between software and hardware.
-      It manages hardware resources (like CPU, memory, and devices) and allows software applications to 
-      interact with the hardware. 
-      shell is an intermediate btw kernel and hardware
+    The kernel acts as a bridge between software and hardware.
+    It manages hardware resources (like CPU, memory, and devices) and allows software applications to 
+    interact with the hardware. 
+
+    Shell is an Command Line interface which allows the User to interact with Kernel. It takes User commands, translates them into
+    system calls and communicate with the Kernel to execute them.
+
+    User ( interacts using CLI ) → Shell → Kernel → Hardware
 
     * User → Shell → Kernel → Hardware
 
@@ -15,7 +19,8 @@
 
     man <command> – Displays manual pages for the command.
 
-    hostname – Displays the system hostname.
+3. hostname -> gives hostname
+    hostname -I gives the IP Address
 
     whoami – Displays current logged-in user.
 
@@ -181,4 +186,14 @@
 
     nslookup www.google.com - Gives DNS Resolution
 
-    dig www.google.com - Gives detailes DNQ query info
+44. lsblk -> list block devices 
+
+45. fdisk -> 
+
+46. gzip filename -> compresses the given file 
+
+46. gunzip filename -> de-compresses the given file 
+
+47. zip createdFileName folderName -> compresses the given folder 
+
+48. unzip folderName -> compresses the given folder 
