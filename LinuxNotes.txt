@@ -1,188 +1,184 @@
 1. Linux - 
+
     It is an open-source operating system based on Unix principle
-    The kernel acts as a bridge between software and hardware.
-    It manages hardware resources (like CPU, memory, and devices) and allows software applications to 
-    interact with the hardware. 
-    shell is an intermediate btw kernel and hardware
 
-    User → Shell → Kernel → Hardware
+    * The kernel acts as a bridge between software and hardware.
+      It manages hardware resources (like CPU, memory, and devices) and allows software applications to 
+      interact with the hardware. 
+      shell is an intermediate btw kernel and hardware
 
+    * User → Shell → Kernel → Hardware
 
-    ------------   Basic commands   ------------    
+2. Basic System Information Commands -
 
-1. uname ->  prints the kernel name
+    uname – Prints the kernel name.
 
-2. man <Command> -> manual command gives info about the command passed
+    man <command> – Displays manual pages for the command.
 
-3. hostname -> gives hostname
+    hostname – Displays the system hostname.
 
-4. whoami-> Who am i - gives information about the current User
+    whoami – Displays current logged-in user.
 
-5. sudo -> runs command using root User, Root user is the admin user
+    tty – Shows terminal file name.
 
-6. sudo - i -> login the current user as root user
+    date – Shows or sets system date/time.
 
-7. tty ->
+    echo "Hello" – Prints a string to the terminal.
 
-8. users -> gives info about all the users on this system
+3. User Management -
 
-9. adduser username -> creates new user 
+    adduser username – Adds a new user.
 
-10. id -> gives information about the user logged in
+    passwd – Changes the user's password.
 
-11. users -> gives information about all the groups, groups refers to say admin group , normal user 
-    group etc
+    id – Shows UID, GID, and group info.
 
-12. su -> switch user , switches users
+    users – Lists current users.
 
-13. usermod -> user modify , modifies users 
-    usermod -g group_NewGroup username
-    usermod -a (append) -G sudo dummy1  (Gives sudo permission to dummy1 user)
+    su – Switches user.
 
-14. addgroup groupName-> creates new group
+    sudo -i – Logs in as root user.
 
-15. deluser username-> delete the given username
+    usermod – Modify user details.
 
-16. delgroup groupName-> deletes the given groupName
+    usermod -g newGroup user
 
-17. date -> prints or sets the system date or time
+    usermod -aG sudo dummy1 – Adds dummy1 to sudo group
 
-18. echo -> The echo command in Linux is used to display a line of text or a string. It's commonly used 
-    to print text to the terminal or to write data to a file
-            echo "file content" > filename -> adds content to given filename
-            echo "file content" >> filename -> appends content to the given filename
+    deluser username – Deletes a user.
 
-19. passwd -> changes the current password of user
+    addgroup groupName – Creates a new group.
 
-20. pwd -> Shows the current working directory
+    delgroup groupName – Deletes a group.
 
-21. touch filename-> Used to create new file , touch .filename creates a hidden file
+4. File and Directory Management
 
-22. cd -> change directory , cd .. moves to the parent directory, cd - move to the previous directory
+    pwd – Prints current working directory.
 
-23. head filename -> Shows starting content of file for given number of lines
-    head  -10 dummy.txt prints first 10 lines
+    cd – Changes directory (cd .. to go up).
 
-24. tail filename -> Shows starting content of file for given number of lines
-    tail  -10 dummy.txt prints alst 10 lines
-    tail -f dummy.txt - shows live changes in a file
+    touch file.txt – Creates file.
 
-25. file -> determines file type
+    mkdir dirName – Creates directory.
 
-26. sort filename -> sorts the file contents
-    to store the sorted content inside another file use sort -o result.txt file1.txt file2.txt
+    mkdir -p a/b/c/{x,y} – Nested directories.
 
-27. cat filename-> concatinates the file and shows on standard output device or terminal
-    cat > result.txt -> whatever is written in stored inside result.ṭxt file
-    cat result.txt -> reads the content of result.txt file
-    > standard output 
-    < standard input
-    input(0) output(1) error(2)
-    
-    unknownCommand >> error.txt 2>&1   (append the standard output in error.txt and standard error 
-    is redirected to standard output)
+    rm -rv dirName – Removes directory recursively with output.
 
-    >> appends into the file
+    rmdir dirName – Removes an empty directory.
 
-28. pipe concept ->output of one command becomes input for another command 
-    ls | sort  -> ls output acts as input for sort
+    cp src dest – Copies file/directory.
 
-29. mkdir directoryName -> make directory
-    mkdir -p test1/test2/test3/{folder1,folder2}
+    mv src dest – Moves/renames file/directory.
 
-30. rmdir directoryName -> removes a directory
-    rm -rv directoryName -> removes directory and shows on terminal
+5. File Content Commands -
 
-31. ls -l -> lists file in long listing format
+    cat file.txt – Displays file content.
 
-    -rwx -rw r--
-    read write execute
-    user group others
-    * By default execution permission is not given to any file in linux due to security purpose
+    cat > file.txt – Creates and writes to file.
 
-    First Column (- rw- r-- r--): This represents the file permissions.
-    The first character (-) indicates the file type (- for a regular file, d for a directory, l for a symbolic link).
-    The next three characters (rw-) indicate the owner's permissions:
-    r: read
-    w: write
-    x: execute
-    The next three characters (r--) represent the group's permissions.
-    The last three characters (r--) represent others' permissions.
+    head -10 file.txt – Displays first 10 lines.
 
-32. cp source destination-> copy command 
+    tail -10 file.txt – Displays last 10 lines.
 
-33. mv source destination -> renames or moves files from source to destination
+    tail -f file.txt – Displays real-time updates.
 
-34. chmod -> change mode 
-    chmod [who][operator][permissions] filename
-    Who: Specifies whose permissions you want to change.
+    file file.txt – Identifies file type.
 
-    u = user (owner)
-    g = group
-    o = others
-    a = all (user, group, and others)
-    Operator: Specifies how to change the permissions.
+    sort file.txt – Sorts file content.
 
-    + = add permission
-    - = remove permission
-    = = set exact permission
-    Permissions:
+    sort -o result.txt file1.txt file2.txt
 
-    r = read
-    w = write
-    x = execute
-    Example:
-    chmod u+x myfile.txt
+6. Permissions and Ownership -
 
-   *** Octal representation ***
-    4 - r - Read
-    2 - w - Write
-    1 - x - Execute
-    Example:
-    chmod 766 myfile.txt -> will give rwx rw- rw- permission
+    ls -l – Lists files with permissions.
 
-35. setgid -> sets group id
-    
-   *** Octal representation ***
+    Permission format:
+
+    -rwxr--r--
+    |   | |  |
+    |   | |  Others
+    |   | Group
+    |   Owner
+    Type (d:dir, -:file, l:link)
+
+    Changing Permissions:
+
+    chmod u+x file.txt
+
+    chmod 766 file.txt – rwx rw- rw-
+
+    chmod 2766 file.txt – Adds setgid
+
+    Octal Codes:
+
+    4 - read
+    2 - write
+    1 - execute
+
+    Special Bits:
+
     4 - setuid
     2 - setgid
-    1 - sticky
+    1 - sticky bit
+
+    Ownership:
+
+    chown user:group file.txt
+
+    chgrp group file.txt
+
+7. Disk and Mount Management
+
+    df -h – Disk usage (human-readable).
+
+    du -sh folder/ – Space used by folder.
+
+    lsblk – Lists block devices.
+
+    fdisk -l – Partition info.
+
+    mount device path/ – Mount device.
+
+    mountpoint path/ – Checks if mounted.
+
+    umount path/ – Unmount.
+
+    Formatting Example:
+
+    sudo file -s /dev/xvdbb        # Check if formatted
+    sudo mkfs -t ext4 /dev/xvdbb   # Format volume
+    mount /dev/xvdbb /mnt/data     # Mount it
+
+8. Compression and Archiving
+
+    gzip file.txt – Compresses a file.
+
+    gunzip file.txt.gz – Decompresses.
+
+    zip archive.zip folder/ – Compresses folder.
+
+    unzip archive.zip – Extracts contents.
 
     Example:
-    chmod 2766 myfile.txt -> will setgid as current group & will give rwx rw- rw- permission
 
-36. which commandName -> searches for the full path of a specified command
+    zip mycode.zip myproject/
+    unzip mycode.zip
 
-37. umask -> sets the default permissions for new files and directories
-    Example 
-    usmask 022 -> 777-022 = 755 means rwe r-x r-x for files and directories
+9. Miscellaneous -
 
-38. chown  owner:group filename -> used to changes owner and or group of file/directory
-    Example
-    chown ravi:raviGrp ravi.txt
+    which command – Shows full path of command.
 
-38. chgrp group filename -> used to changes owner and or group of file/directory 
-    Example
-    chgrp raviGrp ravi.txt
+    umask – Sets default permissions.
 
-39. mount filename path -> is used to mount the contents of device or iso etc files into a given path folder1
+    umask 022 → 755 for dirs, 644 for files
 
-40. mountpoint point/pathName -> tells whether the given point is mountpoint or not
+    * apt install man-db - Install manuals for all the commands
 
-41. umount -> unmounts the given mountpoint
+10. Networks -
 
-42. du -> disk usage gives info about the space the folder/files takes
+    ip a - Gives ip address of the system
 
-43. df -> disk filesystem used to display information about disk space usage on mounted filesystems
+    nslookup www.google.com - Gives DNS Resolution
 
-44. lsblk -> list block devices 
-
-45. fdisk -> 
-
-46. gzip filename -> compresses the given file 
-
-46. gunzip filename -> de-compresses the given file 
-
-47. zip createdFileName folderName -> compresses the given folder 
-
-48. unzip folderName -> compresses the given folder 
+    dig www.google.com - Gives detailes DNQ query info
