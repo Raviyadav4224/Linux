@@ -186,14 +186,3 @@
 
     nslookup www.google.com - Gives DNS Resolution
 
-44. lsblk -> list block devices 
-
-45. fdisk -> 
-
-46. gzip filename -> compresses the given file 
-
-46. gunzip filename -> de-compresses the given file 
-
-47. zip createdFileName folderName -> compresses the given folder 
-
-48. unzip folderName -> compresses the given folder 
