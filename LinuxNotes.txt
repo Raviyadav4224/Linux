@@ -180,9 +180,12 @@
 
     * apt install man-db - Install manuals for all the commands
 
+    * cat /etc/passwd - Reads the content of passwd and gives user info
+
+    * cat /etc/os-release - Gives Information about Linux System such as version
+
 10. Networks -
 
     ip a - Gives ip address of the system
 
     nslookup www.google.com - Gives DNS Resolution
-
