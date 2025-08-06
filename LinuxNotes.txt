@@ -184,6 +184,14 @@
 
     * cat /etc/os-release - Gives Information about Linux System such as version
 
+    * systemctl list-units --type=service - Lists all the services which are available like Nginx, Docker
+
+    * systemctl enable service_name - Enable a service to run on start
+
+    * systemctl start service_name - Starts a service
+
+    * systemctl stop service_name - Stops a service
+
 10. Networks -
 
     ip a - Gives ip address of the system
